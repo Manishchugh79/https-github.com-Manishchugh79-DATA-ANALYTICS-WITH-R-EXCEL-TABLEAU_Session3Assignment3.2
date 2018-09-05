@@ -1,0 +1,84 @@
+﻿Session 3 – Introduction to
+      working with R
+       Assignment - 2
+Contents
+
+  Introduction ..................................................................................................................................................... 2
+
+  Objective .......................................................................................................................................................... 2
+
+  Prerequisites .................................................................................................................................................... 2
+
+  Associated Data Files ....................................................................................................................................... 2
+
+  Problem Statement ......................................................................................................................................... 2
+
+  Expected Output .............................................................................................................................................. 2
+
+
+
+
+   Copyrights© 2017, AcadGild. All Rights Reserved                                                                                                                1
+   Introduction
+This assignment will help you to understand the key concepts learnt in this session.
+
+
+   Objective
+This assignment will test your skills on Operations on Data Structures in R.
+
+
+   Prerequisites
+Not Applicable
+
+
+   Associated Data Files
+Not Applicable
+
+
+   Problem Statement
+1. Define matrix mymat by replicating the sequence 1:5 for 4 times and transforming into a matrix, sum over rows and columns.
+Answer:
+
+# define matrix mymat by replicating the sequence 1:5 for 4 times and transforming into a matrix
+mymat<-matrix(rep(seq(5),4),ncol = 5)
+mymat
+
+# mymat sum on rows
+apply(mymat, 1, sum)
+
+# mymat sum on column
+apply(mymat, 2, sum)
+
+> mymat<-matrix(rep(seq(5),4),ncol = 5)
+> mymat
+     [,1] [,2] [,3] [,4] [,5]
+[1,]    1    5    4    3    2
+[2,]    2    1    5    4    3
+[3,]    3    2    1    5    4
+[4,]    4    3    2    1    5
+> apply(mymat, 1, sum)
+[1] 15 15 15 15
+> apply(mymat, 2, sum)
+[1] 10 11 12 13 14
+>
+
+apply() function, instructs R to call a user-specified function on each of the rows or each of the columns of a matrix.
+
+This is the general form of apply for matrices:
+apply(m,dimcode,f,fargs)
+	where the arguments are as follows:
+1.	m is the matrix.
+2.	dimcode is the dimension, equal to 1 if the function applies to rows or 2 for columns.
+3.	f is the function to be applied.
+4.	fargs is an optional set of arguments to be supplied to f.
+ 
+
+
+   Expected Output
+Not Applicable
+
+
+
+
+  Copyrights© 2017, AcadGild. All Rights Reserved                                                        2
+
